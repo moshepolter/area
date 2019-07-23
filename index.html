@@ -2,86 +2,7 @@
 <html>
   <head>
     <title>areas</title>
-    <style>
-    body{
-      background-image: 
-      url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/soccer.jpeg");
-      font-family: Helvetica;
-      font-weight: bold;
-      opacity: .7 !important;
-      }
-      .mb {
-        margin-bottom: 16px;
-        margin-left: 10px;
-        margin-top: 10px;
-      }
-      .copy{
-        margin-top: 100px !important;
-        color: white;
-        margin-right: 1000px;
-        opacity: 1;
-      }
-      label {
-        display: block;
-        margin-left: 13px;
-      }
-      .select{
-        color: red;
-        background-color: black;
-        margin-left: 60px;
-        opacity: 1 !important; 
-        font-family: Helvetica;
-        font-weight: bold;
-      }
-      .button{
-        background-color: red;
-        color: black;   
-        margin-left: 63px;
-        font-family: Helvetica;
-        font-weight: bold; 
-        margin-bottom: 10px; 
-        margin-top: 5px;   
-      }
-      .input{
-        background-color: black;
-        color: white;
-        line-height: normal;
-        margin-left: 23px;
-        opacity: .80;
-      }
-      .form {
-        border: dotted;
-        background-color: lightyellow;
-        float: left;
-        margin-left: 490px !important;
-        margin-top: 20px !important;
-        border-color: blue;
-        border-radius: 3px;
-      }
-      @media only screen and (max-width: 1080px)
-      {
-        .form{
-          margin-left: 350px !important;
-          margin-top: 200px !important;
-        }
-      }
-      @media only screen and (min-width: 1300px)
-      {
-        .copy{
-          margin-top: 780px !important;
-        }
-        .form
-        {
-          margin-left: 780px !important;
-          margin-top: 200px !important;
-        }
-        body
-        {
-          background-size: cover !important;
-        }
-      }
-      
-    </style>
+    <link href="Style.css" type="text/css" rel="stylesheet"/>
   </head>
   <body>
     <form>
@@ -106,6 +27,7 @@
         </label>
         <input type="text" id="hrec" class="input">
       </div>
+      <div id="main-content">
       <select id="select" class="select">
         <option>
           rectangle
@@ -128,74 +50,12 @@
       </select><br>
       <input type="button" value="calculate area" onclick="cal()" class="button">
        </div>
+       </div>
     </form>
     <br>
     <br>
     <br>
-    <script type="text/javascript">
-      function cal(){ 
-        const select = document.getElementById("select");
-        const selectValue = select.options[select.selectedIndex].value;
-
-        const input1 = document.getElementById("lenrec").value;
-        const inpu2 = document.getElementById("widrec").value;
-        const height = document.getElementById("hrec").value;
-        if(selectValue === NaN){
-          alert("you must enter a number")
-        }
-        else {
-
-        if (selectValue === "trapezoid") {
-          if (height <= 0 || input1 <= 0 || inpu2 <= 0) {
-            alert("you must input base1, bse2 and height to get results (numbers cant be negative)")
-          }
-          else {
-            alert(input1 + inpu2 / 2 * height + " sq.ft");
-          }
-        }
-        if (selectValue === "rectangle") {
-          if (input1 <= 0 || inpu2 <= 0) {
-
-          alert("you must enter Length and Width to get results (numbers cant be negative)")
-        }
-          else{
-          alert(input1 * inpu2 + " sq.ft")
-        }
-        }
-        if(selectValue === "triangle"){
-          if(input1 <= 0 || height <= 0){
-            alert("base1 and hieght must be filled in to get results")
-          }
-          else{
-          alert(input1 * height / 2 + " sq.ft")
-        }
-        }
-        if (selectValue == "square") {
-          if (input1 <= 0) {
-            alert("side mustbe filled in to get results")
-          }
-          else{
-          alert(input1 * input1 + " sq.ft")
-          }
-        }
-        if (selectValue == "circle") {
-          if (inpu2 <= 0) {
-            alert("radius must be filled in to get results")
-          }
-          else{
-          alert(3.14 * (inpu2 * inpu2) + " sq.ft")
-        }
-        }
-        if (selectValue == "parallelogram") {
-          if (input1 <= 0 || height <= 0) {
-            alert("you must fill in base1 and hieght to get results")
-          } else {
-            alert(input1 * height || inpu2 * height+" sq. ft");
-          }
-        }
-      }
-        };
-      </script>
+    <script type="text/javascript" src="Area-Js.js"></script>
     <p class="copy">&copy; all rights resrved<br>by moshe polter</p>
   </body>
 </html>

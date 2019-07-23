@@ -1,0 +1,82 @@
+body{
+    background-image: 
+    url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/soccer.jpeg");
+    font-family: Helvetica;
+    font-weight: bold;
+    opacity: .7 !important;
+    }
+    .mb {
+      margin-bottom: 16px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .copy{
+      margin-top: 100px !important;
+      color: white;
+      margin-right: 1000px;
+      opacity: 1;
+    }
+    label {
+      display: block;
+      margin-left: 13px;
+    }
+    .select{
+      color: red;
+      background-color: black;
+      margin-left: 60px;
+      opacity: 1 !important; 
+      font-family: Helvetica;
+      font-weight: bold;
+    }
+    .button{
+      background-color: red;
+      color: black;   
+      margin-left: 63px;
+      font-family: Helvetica;
+      font-weight: bold; 
+      margin-bottom: 10px; 
+      margin-top: 5px;   
+    }
+    .input{
+      background-color: black;
+      color: white;
+      line-height: normal;
+      margin-left: 23px;
+      opacity: .80;
+    }
+    .form {
+      border: dotted;
+      background-color: lightyellow;
+      float: left;
+      margin-left: 490px !important;
+      margin-top: 20px !important;
+      border-color: blue;
+      border-radius: 3px;
+    }
+    @media only screen and (max-width: 1080px)
+    {
+      .form{
+        margin-left: 350px !important;
+        margin-top: 200px !important;
+        font-size: 20px;
+      }
+      .copy{
+        display: none;
+      }
+      .main-content{
+        text-align: center;
+      }
+    }
+    @media only screen and (min-width: 1300px)
+    {
+      .form
+      {
+        margin-left: 780px !important;
+        margin-top: 200px !important;
+      }
+      body
+      {
+        background-size: cover !important;
+      }
+    }
+    
