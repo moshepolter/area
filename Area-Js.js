@@ -14,6 +14,9 @@ function cal(){
       if (height <= 0 || input1 <= 0 || inpu2 <= 0) {
         alert("you must input base1, bse2 and height to get results (numbers cant be negative)")
       }
+      else if(height != Number || input1 != Number || inpu2 != Number){
+        alert("you must enter a number")
+      }
       else {
         alert(input1 + inpu2 / 2 * height + " sq.ft");
       }
@@ -23,6 +26,9 @@ function cal(){
 
       alert("you must enter Length and Width to get results (numbers cant be negative)")
     }
+    else if(input1 != Number || inpu2 != Number){
+      alert("you must enter a number")
+    }
       else{
       alert(input1 * inpu2 + " sq.ft")
     }
@@ -30,6 +36,9 @@ function cal(){
     if(selectValue === "triangle"){
       if(input1 <= 0 || height <= 0){
         alert("base1 and hieght must be filled in to get results")
+      }
+      else if(height != Number || input1 != Number){
+        alert("you must enter a number")
       }
       else{
       alert(input1 * height / 2 + " sq.ft")
@@ -39,6 +48,9 @@ function cal(){
       if (input1 <= 0) {
         alert("side mustbe filled in to get results")
       }
+      else if(input1 != Number){
+        alert("you must enter a number")
+      }
       else{
       alert(input1 * input1 + " sq.ft")
       }
@@ -47,6 +59,9 @@ function cal(){
       if (inpu2 <= 0) {
         alert("radius must be filled in to get results")
       }
+      else if(inpu2 != Number){
+        alert("you must enter a number")
+      }
       else{
       alert(3.14 * (inpu2 * inpu2) + " sq.ft")
     }
@@ -54,6 +69,9 @@ function cal(){
     if (selectValue == "parallelogram") {
       if (input1 <= 0 || height <= 0) {
         alert("you must fill in base1 and hieght to get results")
+      }
+      else if(height != Number || input1 != Number){
+        alert("you must enter a number")
       } else {
         alert(input1 * height || inpu2 * height+" sq. ft");
       }
