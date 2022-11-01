@@ -5,10 +5,7 @@ function cal(){
     const input1 = document.getElementById("lenrec").value;
     const inpu2 = document.getElementById("widrec").value;
     const height = document.getElementById("hrec").value;
-    if(selectValue === NaN){
-      alert("you must enter a number")
-    }
-    else {
+ 
 
     if (selectValue === "trapezoid") {
       if (height <= 0 || input1 <= 0 || inpu2 <= 0) {
@@ -76,5 +73,4 @@ function cal(){
         alert(input1 * height || inpu2 * height+" sq. ft");
       }
     }
-  }
 };
